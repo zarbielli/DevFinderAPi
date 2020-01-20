@@ -61,8 +61,9 @@ module.exports = {
     });
   },
 
-  async UpdateDev(request, response) {
-    const { id } = request.params;
-    const dev = await Dev.findById();
+  async Index(_request, response) {
+    const devs = await Dev.find();
+
+    return response.json(devs);
   },
 };

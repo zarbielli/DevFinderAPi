@@ -21,6 +21,7 @@ const routes = Router();
 // request.body
 
 routes.post('/devs', DevsController.CreateDev);
+routes.get('/devs', DevsController.Index);
 
 // That exports the routes object, this allows who import routes access
 // all routes
