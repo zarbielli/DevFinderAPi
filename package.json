@@ -1,0 +1,17 @@
+{
+  "name": "DevFinderAPi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/zarbielli/DevFinderAPi.git",
+  "author": "zarbielli <jlfz06@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0"
+  }
+}
