@@ -1,7 +1,7 @@
 // For import just a section of a module use {}, in this case I am importing
 // just the router from the express module
 const { Router } = require('express');
-
+const DevsController = require('./controllers/DevsController');
 // Creates an Router object
 const routes = Router();
 
@@ -20,10 +20,7 @@ const routes = Router();
 // as body of a POST requisition.
 // request.body
 
-routes.post('/users', (request, response) => {
-  console.log(request.body);
-  return response.json({ message: 'Hello Darksness' });
-});
+routes.post('/devs', DevsController.CreateDev);
 
 // That exports the routes object, this allows who import routes access
 // all routes
