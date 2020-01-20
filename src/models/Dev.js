@@ -1,6 +1,7 @@
 // We need to import mongoose here to setting up how this model will be save at
 // MongoDB
 const mongoose = require('mongoose');
+const PointSchema = require('./utils/PointSchema');
 
 // Function used to setting the Dev table columns scheme
 const DevSchema = new mongoose.Schema({
@@ -11,6 +12,10 @@ const DevSchema = new mongoose.Schema({
   // When you pass the type off a attribute inside a array, MongoDB knows that
   // this attribute will be a array of this type.
   techs: [String],
+  location: {
+    type: PointSchema,
+    index: '2dsphere',
+  },
 });
 
 // After you create the Model Scheme you have to export the model to make it
